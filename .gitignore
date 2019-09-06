@@ -1,0 +1,9 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Node.JS
+node_modules
+
+# Atom
+.ftpconfig
