@@ -2179,6 +2179,10 @@ a.btn_white,
   height: 100%;
   padding: 5px 10px;
 }
+.form-container select {
+  padding: 5px 10px;
+  height: 30px;
+}
 .form-container .btn {
   margin-top: 30px;
 }
@@ -2233,6 +2237,57 @@ a.btn_white,
 }
 .navbar-toggle {
   display: none;
+}
+#myModal {
+  text-align: center;
+}
+#myModal .modal-dialog {
+  width: 450px;
+  max-width: 100%;
+}
+#myModal .modal-header {
+  padding: 10px;
+}
+#myModal .modal-body {
+  padding: 10px 45px;
+}
+#myModal .modal-content {
+  padding: 20px;
+}
+#myModal .close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  font-weight: 400;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+}
+#myModal .form-container .row {
+  width: 100%;
+  justify-content: center;
+}
+#myModal .box {
+  width: 100%;
+  height: auto;
+}
+#myModal input {
+  width: 100%;
+  height: 50px;
+}
+#myModal input:first-of-type {
+  margin-bottom: 20px;
+}
+#myModal select {
+  height: 50px;
+}
+#myModal p {
+  font-size: 16px;
+}
+#myModal .form-container .btn {
+  padding: 15px 55px;
 }
 @media (max-width: 967px) {
   .header .flexbox {
@@ -2503,5 +2558,15 @@ a.btn_white,
   }
   .buttons button:first-child {
     margin-bottom: 20px;
+  }
+  #myModal .modal-dialog {
+    width: 100%;
+    margin: 0;
+  }
+  #myModal .modal-content {
+    border-radius: 0;
+  }
+  #myModal .modal-body {
+    padding: 0;
   }
 }

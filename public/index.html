@@ -54,7 +54,7 @@
           Просто выберите тариф и начните майнить уже сейчас!»
         </p>
         <div class="buttons">
-          <button class="btn" type="button" name="button">начать майнить</button>
+          <button class="btn" type="button" name="button" data-keyboard="true" data-toggle="modal" data-target="#myModal">начать майнить</button>
           <button class="btn btn_white" type="button" name="button" href="#ethereum">почему ethereum</button>
         </div>
       </div>
@@ -139,7 +139,7 @@
             <p class="card__descr">
               Применимы сборы за ээ и то**
             </p>
-            <button class="btn card__btn">Подробнее</button>
+            <button class="btn card__btn" data-keyboard="true" data-toggle="modal" data-target="#myModal" data-select="select-start">Подробнее</button>
           </div>
           <div class="card card_sm">
             <b class="card__title">Стандартный</b>
@@ -152,7 +152,7 @@
             <p class="card__descr">
               Применимы сборы за ээ и то**
             </p>
-            <button class="btn card__btn">Подробнее</button>
+            <button class="btn card__btn" data-keyboard="true" data-toggle="modal" data-target="#myModal" data-select="select-standart">Подробнее</button>
           </div>
           <div class="card card_sm">
             <b class="card__title">Продвинутый</b>
@@ -165,7 +165,7 @@
             <p class="card__descr">
               Применимы сборы за ээ и то**
             </p>
-            <button class="btn card__btn">Подробнее</button>
+            <button class="btn card__btn" data-keyboard="true" data-toggle="modal" data-target="#myModal" data-select="select-pro">Подробнее</button>
           </div>
           <div class="card card_sm">
             <b class="card__title">Индивидуальный</b>
@@ -178,7 +178,7 @@
             <p class="card__descr">
               Применимы сборы за ээ и то**
             </p>
-            <button class="btn card__btn">Подробнее</button>
+            <button class="btn card__btn" data-keyboard="true" data-toggle="modal" data-target="#myModal" data-select="select-individ">Подробнее</button>
           </div>
         </div>
       </div>
@@ -384,6 +384,45 @@
       </div>
     </div>
   </footer>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="modal-title">Нам приятно, что Вас заинтересовало наше предложение</h2>
+      </div>
+      <div class="modal-body">
+        <p>Оставьте свои контактные данные, чтобы мы могли связаться с Вами</p>
+        <form action="#">
+        <div class="form-container">
+          <div class="row">
+            <div class="box">
+              <input type="text" name="name" value="" placeholder="Ваше имя">
+              <input type="email" name="email" placeholder="E-mail">
+              <p><b>Интересующий контракт</b></p>
+              <select class="" name="">
+                <option value="select-start">Начальный $220</option>
+                <option value="select-standart">Стандартный $499</option>
+                <option value="select-pro">Продвинутый $899</option>
+                <option value="select-individ">Индивидуальный от $1000</option>
+              </select>
+            </div>
+          </div>
+
+
+          <button type="submit" class="btn">Отправить</button>
+          <p><small>Ваши данные не будут переданы третьим лицам</small></p>
+
+        </div>
+      </form>
+      </div>
+    </div>
+
+  </div>
+</div>
 
   <script src="js/vendor.min.js">
 
@@ -394,7 +433,7 @@
 
       $('.about .btn').on('click', function () {
         $(this).hide();
-        $('.about p').fadeIn();
+        $('.about p').removeClass('hidden');
       });
 
       var headerHeight = $('.header').height();
@@ -412,6 +451,12 @@
       navMain.on("click", "a", null, function() {
           navMain.collapse('hide')
       });
+
+      $('[data-select]').on('click', function () {
+        var data = $(this).data('select');
+        $('#myModal').find('option[value="' + data + '"]').attr('selected', true);
+      });
+
     });
   </script>
 </body>
