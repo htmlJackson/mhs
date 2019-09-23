@@ -7,6 +7,7 @@
   <title>MHS Cloud Mining</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -51,7 +52,7 @@
         <p class="promo__description">
           1MHS предлагает вам возможность присоединиться  к индустрии криптомайнинга.<br>
           Ваше современное оборудование для майнинга уже запущено.<br>
-          Просто выберите тариф и начните майнить уже сейчас!»
+          Просто выберите тариф и начните майнить уже сейчас!
         </p>
         <div class="buttons">
           <button class="btn" type="button" name="button" data-keyboard="true" data-toggle="modal" data-target="#myModal">начать майнить</button>
@@ -127,56 +128,57 @@
           <h2 class="section-title"><span>майнинг «Эфира» etherium (ETH)</span></h2>
           <p>На старте реализации мы специально ограничили мощность выделенную под проект «облачного майнинга», поэтому все заявки проходят в полуавтоматическом режиме. Спасибо за понимание.</p>
         </div>
+        <h2 class="section-title"><span class="mb">Тарифы</h2>
         <div class="cards-row">
           <div class="card card_sm">
             <b class="card__title">Начальный</b>
-            <span class="card__price">$220</span>
-            <span class="card__power">20 MH/s (11$ / MH/s)</span>
+            <span class="card__price">20 mh/s</span>
+            <span class="card__power">220 $<br>11$ за 1 mh/s</span>
             <p class="card__descr">
               Контракт на 2 года*<br>
               Ежедневные выплаты в ETH<br>
             </p>
             <p class="card__descr">
-              Применимы сборы за ээ и то**
+              Применимы сборы за ЭЭ и ТО**
             </p>
             <button class="btn card__btn" data-keyboard="true" data-toggle="modal" data-target="#myModal" data-select="select-start">Подробнее</button>
           </div>
           <div class="card card_sm">
             <b class="card__title">Стандартный</b>
-            <span class="card__price">499 $</span>
-            <span class="card__power">50 MH/s (9,98$ / MH/s)</span>
+            <span class="card__price">50 mh/s</span>
+            <span class="card__power">499 $<br>9,98$ за 1 mh/s</span>
             <p class="card__descr">
               Контракт на 2 года*<br>
               Ежедневные выплаты в ETH.
             </p>
             <p class="card__descr">
-              Применимы сборы за ээ и то**
+              Применимы сборы за ЭЭ и ТО**
             </p>
             <button class="btn card__btn" data-keyboard="true" data-toggle="modal" data-target="#myModal" data-select="select-standart">Подробнее</button>
           </div>
           <div class="card card_sm">
             <b class="card__title">Продвинутый</b>
-            <span class="card__price">899 $</span>
-            <span class="card__power">100 MH/s (8,99$ / MH/s)</span>
+            <span class="card__price">100 mh/s</span>
+            <span class="card__power">899 $<br>8,99$ за 1 mh/s</span>
             <p class="card__descr">
               Контракт на 2 года*<br>
               Ежедневные выплаты в ETH.
             </p>
             <p class="card__descr">
-              Применимы сборы за ээ и то**
+              Применимы сборы за ЭЭ и ТО**
             </p>
             <button class="btn card__btn" data-keyboard="true" data-toggle="modal" data-target="#myModal" data-select="select-pro">Подробнее</button>
           </div>
           <div class="card card_sm">
             <b class="card__title">Индивидуальный</b>
-            <span class="card__price">От 1000 $</span>
-            <span class="card__power">До 7$ / MH/s</span>
+            <span class="card__price">Под заказ</span>
+            <span class="card__power">от 1000 $<br>До 7$ за mh/s</span>
             <p class="card__descr">
               Индивидуальный срок контракта*<br>
               Ежедневные выплаты в ETH.
             </p>
             <p class="card__descr">
-              Применимы сборы за ээ и то**
+              Применимы сборы за ЭЭ и ТО**
             </p>
             <button class="btn card__btn" data-keyboard="true" data-toggle="modal" data-target="#myModal" data-select="select-individ">Подробнее</button>
           </div>
@@ -355,21 +357,42 @@
         <div class="form-container">
           <div class="row">
             <div class="box">
-              <input type="text" name="name" value="" placeholder="Ваше имя">
-              <input type="email" name="email" placeholder="E-mail">
+              <input class="name-input" type="text" id="name" name="name" value="" placeholder="Ваше имя">
+              <input type="email" id="email" name="email" placeholder="E-mail">
             </div>
             <div class="box">
-              <textarea name="message" rows="8" cols="80" placeholder="Ваш вопрос"></textarea>
+                <textarea class="request__textarea" id="message" name="message"  rows="8" cols="80" placeholder="Ваш вопрос"></textarea>
+            </div>
+
+            <div class="captcha">
+              <img src="https://placekitten.com/85/50">
+              <input class="request__input" type="text" id="captcha" name="captcha" placeholder="Символы*" value="" required="">
             </div>
           </div>
 
 
           <button type="submit" class="btn">Отправить</button>
+
         </div>
       </form>
       <ul class="socials">
         <!-- <li><a href="vk.com" class="vk" aria-label='ссылка на страницу вконтакте'></a></li> -->
-        <li><a href="tg.com" class="tg" aria-label='ссылка на телеграм'></a></li>
+        <li><a href="https://t.me/OneMHs" class="tg" aria-label='ссылка на телеграм'></a></li>
+      </ul>
+
+      <ul class="docs">
+        <li>
+          <a href="docs/Polozhenie_o_principah_konfidencialnosti.pdf" target="_blank">Положение о принципах конфиденциальности</a>
+        </li>
+        <li>
+          <a href="docs/Polzovatelskoe_soglashenie.pdf" target="_blank">Пользовательское соглашение</a>
+        </li>
+        <li>
+          <a href="docs/Politika_ispolzovaniya_faĭlov_cookie.pdf" target="_blank">Политика использования файлов cookie</a>
+        </li>
+        <li>
+          <a href="docs/Ogranichenie_otvetstvennosti.pdf" target="_blank">Ограничение ответственности</a>
+        </li>
       </ul>
 
       <div class="footer__nav">
@@ -396,19 +419,24 @@
       </div>
       <div class="modal-body">
         <p>Оставьте свои контактные данные, чтобы мы могли связаться с Вами</p>
-        <form action="#">
+        <form class="request-form" action="/php/post.php" method="post">
         <div class="form-container">
           <div class="row">
             <div class="box">
-              <input type="text" name="name" value="" placeholder="Ваше имя">
-              <input type="email" name="email" placeholder="E-mail">
+              <input class="name-input" type="text" id="name-2" name="name" value="" placeholder="Ваше имя">
+              <input type="email" id="email-2" name="email" placeholder="E-mail">
               <p><b>Интересующий контракт</b></p>
               <select class="" name="">
-                <option value="select-start">Начальный $220</option>
-                <option value="select-standart">Стандартный $499</option>
-                <option value="select-pro">Продвинутый $899</option>
-                <option value="select-individ">Индивидуальный от $1000</option>
+                <option value="select-start">Начальный 20 mh/s, 220 $</option>
+                <option value="select-standart">Стандартный  50 mh/s, 499 $</option>
+                <option value="select-pro">Продвинутый  100 mh/s, 899 $</option>
+                <option value="select-individ">Индивидуальный - под заказ</option>
               </select>
+
+              <div class="captcha">
+                <img src="https://placekitten.com/85/50">
+                <input class="request__input" type="text" id="captcha" name="captcha" placeholder="Символы*" value="" required="">
+              </div>
             </div>
           </div>
 
