@@ -47,11 +47,11 @@ require '../phpmailer/SMTP.php';
                         {
                                 $this->_send($this->to, $this->emailmess);
 				//mail($this->to, $this->theme, $this->emailmess, $this->headers);
-				header('Location: /thanks.html');
+				header('Location: /index.php');
 			}
 			else
 			{
-				header("Location: /captcha.html");
+				header("Location: /index.php");
 			}
                 }
 

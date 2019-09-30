@@ -112,6 +112,19 @@ ul {
     font-size: 21px;
     line-height: 30px;
   }
+
+  &.thanks {
+    height: 100vh;
+    .flexbox {
+      height: 100%;
+    }
+    .buttons {
+      justify-content: center;
+      .btn {
+        padding: 14px 27px;
+      }
+    }
+  }
 }
 
 .promo__title, .section-title {
@@ -325,10 +338,25 @@ a.btn, .btn {
 
 .card_sm {
   width: 192px;
+  flex-basis: 192px;
   padding: 45px 15px;
   text-align: center;
   .card__title {
     margin-bottom: 35px;
+  }
+}
+
+.card_lg {
+  width: auto;
+  flex-grow: 1;
+  margin-left: 25px;
+  text-align: left;
+  padding: 45px;
+  .card__title {
+    font-size: 21px;
+  }
+  p {
+    font-size: 16px;
   }
 }
 
@@ -343,6 +371,20 @@ a.btn, .btn {
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 1.5px;
+}
+
+.fill-error {
+  &::-webkit-input-placeholder { /* Edge */
+    color: @red;
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: @red;
+  }
+
+  &::placeholder {
+    color: @red;
+  }
 }
 
 .card__power {
@@ -816,6 +858,10 @@ a.btn, .btn {
       margin-left: auto;
       margin-right: auto;
     }
+  }
+
+  .card_lg {
+    margin-right: 0;
   }
 
   .container.flexbox {

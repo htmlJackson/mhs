@@ -1831,6 +1831,18 @@ ul {
   font-size: 21px;
   line-height: 30px;
 }
+.promo.thanks {
+  height: 100vh;
+}
+.promo.thanks .flexbox {
+  height: 100%;
+}
+.promo.thanks .buttons {
+  justify-content: center;
+}
+.promo.thanks .buttons .btn {
+  padding: 14px 27px;
+}
 .promo__title,
 .section-title {
   text-transform: uppercase;
@@ -2015,11 +2027,25 @@ a.btn_white,
 }
 .card_sm {
   width: 192px;
+  flex-basis: 192px;
   padding: 45px 15px;
   text-align: center;
 }
 .card_sm .card__title {
   margin-bottom: 35px;
+}
+.card_lg {
+  width: auto;
+  flex-grow: 1;
+  margin-left: 25px;
+  text-align: left;
+  padding: 45px;
+}
+.card_lg .card__title {
+  font-size: 21px;
+}
+.card_lg p {
+  font-size: 16px;
 }
 .card__btn {
   margin-top: auto;
@@ -2031,6 +2057,17 @@ a.btn_white,
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 1.5px;
+}
+.fill-error::-webkit-input-placeholder {
+  /* Edge */
+  color: #e32023;
+}
+.fill-error:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #e32023;
+}
+.fill-error::placeholder {
+  color: #e32023;
 }
 .card__power {
   margin-bottom: 30px;
@@ -2436,6 +2473,9 @@ a.btn_white,
     max-width: 140px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .card_lg {
+    margin-right: 0;
   }
   .container.flexbox {
     flex-direction: column;

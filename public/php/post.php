@@ -5,14 +5,17 @@ session_start();
 require 'Mail.class.php';
 require 'varDefine.php';
 
-$to = "info@clubtandem.ru";
+//$to = "info@1mhs.pro";
+$to = "fiend.jackson@gmail.com";
 
-$theme  = "Заявка с сайта 'Эксперт-клуб Тандем'";
+$theme  = "Заявка с сайта '1mhs.pro'";
 
 if ($_SESSION['secpic'] == $captcha) {
+
     $objMail = new Mail($to, $theme, $name, $surname, $message, $phone, $email);
-    $objMail->sendMail();
+    $a = $objMail->sendMail();
+
 } else {
-    header("Location: /captcha.html");
+    header("Location: /index.php");
 }
 ?>
